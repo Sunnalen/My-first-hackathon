@@ -1,0 +1,168 @@
+:root {
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+
+}
+
+ul {
+    list-style:none;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*main*/
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.main__intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__title {
+    font-size: 88px;
+    margin-bottom: 15px;
+}
+
+.main__text {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.main__img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container{
+    max-width: 1720px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+.main__img{
+    height: 445px;
+    background: url("img/mac.webp") 50% 66% no-repeat;
+    background-size: cover;
+}
+
+.main__img:nth-child(2){
+    margin-bottom: 85px;
+}
+
+.main__img-text{
+    display: flex;
+    flex-direction: column;
+    height: 445px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 565px;
+    line-height: 1.5;
+}
+
+.main__img-text__item{
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+.main__img-text__item:nth-child(1){
+    margin-bottom: 20px;
+}
+
+/*communication*/
+
+.communication {
+    margin-top: 40px;
+    display: flex;
+    height: 440px;
+}
+
+
+.communication__title {
+    text-align: center;
+    padding: 160px;
+
+    background-color: #f7f7f7;
+}
+
+.title{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.communitcation__text {
+    margin-top: 0;
+    line-height: 3.3;
+}
+
+.communitcation__text-item {}
+
+.communication__img,
+.communication__title {
+    width: 50%;
+}
+
+/*input*/
+.input{
+    margin-top: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__title{
+    margin-bottom: 30px;
+}
+input{
+    width: 450px;
+    height: 40px;
+}
+.input__button{
+    height: 40px;
+    width: 60px;
+    margin-left: -5px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    user-select: none;
+    color: white;
+    background: black;
+    transition: background-color .1s ease, color ,1s ease;
+
+}
+
+.input__button:hover {
+    background: white;
+    color: black;
+}
+.input__button:active {
+    transform: scale(.97);
+}
+
