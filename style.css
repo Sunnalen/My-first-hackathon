@@ -1,13 +1,13 @@
+/* Var */
+
 :root {
-
+    --font-family: 'Roboto', sans-serif;
+    --font-size-regular: 40px;
+    --font-size-small: 14px;
+    --font-size-middle: 22px;
 }
 
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+/* Reset */
 
 h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
     margin: 0;
@@ -15,17 +15,94 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
 
 }
 
-ul {
+ul, ol {
     list-style:none;
 }
 
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:var(--font-family);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* All style */
+
+.title {
+    font-size: var(--font-size-regular);
+}
+
+/* Container */
+
+.container {
+    max-width: 2350px;
+    margin: 0 auto;
+
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Header */
+
+.header {
+    margin-top: 55px;
+}
+
+.menu__title {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation */
+
+.nav {
+    padding: 50px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Button */
+
+.btn__nav {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+
+    text-decoration: none;
+    color:#000;
+}
+
+.input__button{
+    height: 40px;
+    width: 60px;
+    margin-left: -5px;
+    cursor: pointer;
+    border: .5px black solid transparent;
+    user-select: none;
+    color: white;
+    background: black;
+    transition: background-color .1s ease, color ,1s ease;
+
+}
+
+.input__button:hover {
+    background: white;
+    color: black;
+    border: 1px black solid transparent;
 }
 
 /*main*/
+
 .main {
     display: flex;
     flex-direction: column;
@@ -47,7 +124,7 @@ body {
 }
 
 .main__text {
-    font-size: 20px;
+    font-size: var(--font-size-middle);
     margin-bottom: 35px;
 }
 
@@ -56,24 +133,13 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-}
-
-.container{
-    max-width: 1720px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-
-}
-
-.main__img{
     height: 445px;
-    background: url("img/mac.webp") 50% 66% no-repeat;
+    background: url("img/Background/mac.webp") 50% 66% no-repeat;
     background-size: cover;
 }
 
 .main__img:nth-child(2){
-    margin-bottom: 85px;
+    margin-bottom: 45px;
 }
 
 .main__img-text{
@@ -82,20 +148,150 @@ body {
     height: 445px;
     align-items: center;
     justify-content: center;
-    padding: 0 565px;
+    padding: 0 900px;
     line-height: 1.5;
 }
 
 .main__img-text__item{
     text-align: center;
-    font-size: 24px;
+    font-size: var(--font-size-middle);
     color: white;
 }
 .main__img-text__item:nth-child(1){
     margin-bottom: 20px;
 }
 
-/*communication*/
+/* Slideshow */
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.visible__view {
+    display: flex;
+}
+
+.slides {
+    transition-duration: 500ms;
+}
+
+.slide__big, .slide__small {
+    display: block;
+    min-width: 100%;
+    max-height: 400px;
+    height: 100%;
+}
+
+
+.slide__small {
+    max-height: 300px;
+}
+
+.btn__slider {
+    position: absolute;
+    background: url("/img/Icon//i.png");
+    width: 150px;
+    height: 95px;
+    top: 50%;
+}
+
+.btn__slider-right {
+    right: 0;
+    transform: translateY(-50%)
+}
+
+.btn__slider-left {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+/* Information */
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information__title {
+   margin-bottom: 20px;
+   
+    font-size: var(--font-size-regular);
+}
+
+.information__subtitle {
+    margin-bottom: 20px;
+
+    font-size: var(--font-size-middle);
+}
+
+.information__text {
+    padding: 0 820px;
+    
+    font-size: var(--font-size-small);
+    text-align: center;
+    line-height: 2.0;
+}
+
+/* Resume */
+
+.resume__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume__img, .resume__title, .resume__subtitle {
+    margin-bottom: 30px;
+}
+
+.resume__subtitle {
+    margin-bottom: 100px;
+}
+
+.resume__img {
+    border-radius: 50%;
+}
+
+.resume__text-items {
+    padding: 0 30%;
+    display: flex;
+    
+}
+
+.resume__text-titles, .resume__text-dates, .resume__text-discriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+}
+
+.resume__text-titles, .resume__text-dates {
+    margin-right: 50px;
+}
+
+.resume__text-titles {
+    width: 25%;
+}
+
+.resume__text-dates {
+    width: 13%;
+}
+
+.resume__text-discriptions {
+    width: 48%;
+    line-height: 32px;
+}
+
+.resume__text-title, .resume__text-date, .resume__text-discription  {
+    margin-bottom: 50px;
+}
+
+/*Communication*/
 
 .communication {
     margin-top: 40px;
@@ -112,7 +308,7 @@ body {
 }
 
 .title{
-    font-size: 40px;
+    font-size: var(--font-size-regular);
     margin-bottom: 10px;
 }
 
@@ -121,14 +317,20 @@ body {
     line-height: 3.3;
 }
 
-.communitcation__text-item {}
-
 .communication__img,
 .communication__title {
     width: 50%;
+    height: 100%;
 }
 
-/*input*/
+.communication__img {
+    background: url(/img/Background/azia.webp) 70% center no-repeat;
+    background-size: cover;
+    
+}
+
+/*Input*/
+
 .input{
     margin-top: 300px;
 
@@ -141,28 +343,25 @@ body {
 .input__title{
     margin-bottom: 30px;
 }
+
 input{
     width: 450px;
     height: 40px;
-}
-.input__button{
-    height: 40px;
-    width: 60px;
-    margin-left: -5px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    user-select: none;
-    color: white;
-    background: black;
-    transition: background-color .1s ease, color ,1s ease;
-
+    
 }
 
-.input__button:hover {
-    background: white;
-    color: black;
-}
-.input__button:active {
-    transform: scale(.97);
+/* Footer */
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
 }
 
+.footer__title {
+    font-size: var(--font-size-middle);
+    margin-bottom: 25px;
+}
+
+.footer__text:not(:last-child) {
+    margin-bottom: 30px;
+}
