@@ -173,10 +173,6 @@ body {
     display: flex;
 }
 
-.slides {
-    transition-duration: 500ms;
-}
-
 .slide__big, .slide__small {
     display: block;
     min-width: 100%;
@@ -218,7 +214,7 @@ body {
 
 .information__title {
    margin-bottom: 20px;
-   
+
     font-size: var(--font-size-regular);
 }
 
@@ -230,7 +226,7 @@ body {
 
 .information__text {
     padding: 0 820px;
-    
+
     font-size: var(--font-size-small);
     text-align: center;
     line-height: 2.0;
@@ -259,7 +255,7 @@ body {
 .resume__text-items {
     padding: 0 30%;
     display: flex;
-    
+
 }
 
 .resume__text-titles, .resume__text-dates, .resume__text-discriptions {
@@ -326,7 +322,7 @@ body {
 .communication__img {
     background: url(/img/Background/azia.webp) 70% center no-repeat;
     background-size: cover;
-    
+
 }
 
 /*Input*/
@@ -347,7 +343,7 @@ body {
 input{
     width: 450px;
     height: 40px;
-    
+
 }
 
 /* Footer */
