@@ -1,13 +1,13 @@
+/* Var */
+
 :root {
-  
+    --font-family: 'Roboto', sans-serif;
+    --font-size-regular: 40px;
+    --font-size-small: 14px;
+    --font-size-middle: 22px;
 }
 
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+/* Reset */
 
 h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
     margin: 0;
@@ -15,92 +15,353 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, button {
 
 }
 
-ul {
+ul, ol {
     list-style:none;
 }
 
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-family:var(--font-family);
 }
- 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* All style */
+
+.title {
+    font-size: var(--font-size-regular);
+}
+
+/* Container */
+
+.container {
+    max-width: 2350px;
+    margin: 0 auto;
+
+    width: 100%;
+    padding: 0 15px;
+}
+
+/* Header */
+
+.header {
+    margin-top: 55px;
+}
+
+.menu__title {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation */
+
+.nav {
+    padding: 50px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* Button */
+
+.btn__nav {
+    font-family: var(--font-family);
+    font-size: var(--font-size-small);
+
+    text-decoration: none;
+    color:#000;
+}
+
+.input__button{
+    height: 40px;
+    width: 60px;
+    margin-left: -5px;
+    cursor: pointer;
+    border: .5px black solid transparent;
+    user-select: none;
+    color: white;
+    background: black;
+    transition: background-color .1s ease, color ,1s ease;
+
+}
+
+.input__button:hover {
+    background: white;
+    color: black;
+    border: 1px black solid transparent;
+}
+
+/*main*/
+
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+.main__intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .main__title {
-  font-size: 88px;
-  margin-bottom: 15px;
+    font-size: 88px;
+    margin-bottom: 15px;
 }
 
 .main__text {
-  font-size: 20px;
-  margin-bottom: 35px;
+    font-size: var(--font-size-middle);
+    margin-bottom: 35px;
 }
 
 .main__img {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 445px;
+    background: url("img/Background/mac.webp") 50% 66% no-repeat;
+    background-size: cover;
 }
 
-.main__img-item {
-  width: 90%;
-  height: 100%;
+.main__img:nth-child(2){
+    margin-bottom: 45px;
+}
+
+.main__img-text{
+    display: flex;
+    flex-direction: column;
+    height: 445px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 900px;
+    line-height: 1.5;
+}
+
+.main__img-text__item{
+    text-align: center;
+    font-size: var(--font-size-middle);
+    color: white;
+}
+.main__img-text__item:nth-child(1){
+    margin-bottom: 20px;
+}
+
+/* Slideshow */
+
+.slideshow-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.visible__view {
+    display: flex;
+}
+
+.slides {
+    transition-duration: 500ms;
+}
+
+.slide__big, .slide__small {
+    display: block;
+    min-width: 100%;
+    max-height: 400px;
+    height: 100%;
 }
 
 
-
-
-
-
-.main__nav {
-  display: flex;
-  width: 90%;
+.slide__small {
+    max-height: 300px;
 }
 
-.main__nav-text {
-  background-color: rgb(243, 240, 240);
-  width: 50%;
+.btn__slider {
+    position: absolute;
+    background: url("/img/Icon//i.png");
+    width: 150px;
+    height: 95px;
+    top: 50%;
 }
 
-.main__nav-img {
-  width: 50%;
+.btn__slider-right {
+    right: 0;
+    transform: translateY(-50%)
 }
 
-.main__nav-img__item {
-  width: 100%;
-}
-
-.main__img-text {
-  color: white;
+.btn__slider-left {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
 }
 
 
+/* Information */
 
-
-
-
-
-
-
-.main__nav-text {
-  margin-top: 300px;
-  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.information__title {
+   margin-bottom: 20px;
+   
+    font-size: var(--font-size-regular);
+}
+
+.information__subtitle {
+    margin-bottom: 20px;
+
+    font-size: var(--font-size-middle);
+}
+
+.information__text {
+    padding: 0 820px;
+    
+    font-size: var(--font-size-small);
+    text-align: center;
+    line-height: 2.0;
+}
+
+/* Resume */
+
+.resume__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume__img, .resume__title, .resume__subtitle {
+    margin-bottom: 30px;
+}
+
+.resume__subtitle {
+    margin-bottom: 100px;
+}
+
+.resume__img {
+    border-radius: 50%;
+}
+
+.resume__text-items {
+    padding: 0 30%;
+    display: flex;
+    
+}
+
+.resume__text-titles, .resume__text-dates, .resume__text-discriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: justify;
+}
+
+.resume__text-titles, .resume__text-dates {
+    margin-right: 50px;
+}
+
+.resume__text-titles {
+    width: 25%;
+}
+
+.resume__text-dates {
+    width: 13%;
+}
+
+.resume__text-discriptions {
+    width: 48%;
+    line-height: 32px;
+}
+
+.resume__text-title, .resume__text-date, .resume__text-discription  {
+    margin-bottom: 50px;
+}
+
+/*Communication*/
+
+.communication {
+    margin-top: 40px;
+    display: flex;
+    height: 440px;
+}
+
+
+.communication__title {
+    text-align: center;
+    padding: 160px;
+
+    background-color: #f7f7f7;
+}
+
+.title{
+    font-size: var(--font-size-regular);
+    margin-bottom: 10px;
+}
+
+.communitcation__text {
+    margin-top: 0;
+    line-height: 3.3;
+}
+
+.communication__img,
+.communication__title {
+    width: 50%;
+    height: 100%;
+}
+
+.communication__img {
+    background: url(/img/Background/azia.webp) 70% center no-repeat;
+    background-size: cover;
+    
+}
+
+/*Input*/
+
+.input{
+    margin-top: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input__title{
+    margin-bottom: 30px;
+}
+
+input{
+    width: 450px;
+    height: 40px;
+    
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer__title {
+    font-size: var(--font-size-middle);
+    margin-bottom: 25px;
+}
+
+.footer__text:not(:last-child) {
+    margin-bottom: 30px;
 }
